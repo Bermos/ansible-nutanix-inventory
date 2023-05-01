@@ -48,7 +48,7 @@ def get_guest_customization_type(vm_resources):
 
 
 def parse_cli_args():
-    parser = argparse.ArgumentParser(description='Produce an Ansible inventory file from Nutanix')
+    parser = argparse.ArgumentParser(description='Produce an Ansible inventory from Nutanix')
 
     parser.add_argument('--list', action='store_true', default=True, help='List all hosts, defaults to true')
     parser.add_argument('--host', default=None, help='Get all the variables about a specific host')
