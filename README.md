@@ -18,6 +18,7 @@ pip install requests
 The script requires the following environment variables to be set:
 
 - `PRISM_CENTRAL_HOST`: The Prism Central host (e.g., `prism.example.com`).
+- `PRISM_CENTRAL_PORT` (optional): The Prism Central port (default: `9440`).
 - `PRISM_CENTRAL_USERNAME`: The Prism Central username.
 - `PRISM_CENTRAL_PASSWORD`: The Prism Central password.
 - `VERIFY_SSL` (optional): Set to "false" to disable SSL certificate verification (default: "true").

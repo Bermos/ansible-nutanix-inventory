@@ -62,6 +62,7 @@ def main():
 
     # Retrieve environment variables
     prism_central_host = os.environ.get("PRISM_CENTRAL_HOST")
+    prism_central_port = os.environ.get("PRISM_CENTRAL_PORT", "9440")
     prism_central_username = os.environ.get("PRISM_CENTRAL_USERNAME")
     prism_central_password = os.environ.get("PRISM_CENTRAL_PASSWORD")
     verify_ssl = os.environ.get("VERIFY_SSL", "true").lower() == "true"
@@ -71,7 +72,7 @@ def main():
         raise ValueError("PRISM_CENTRAL_HOST, PRISM_CENTRAL_USERNAME, and PRISM_CENTRAL_PASSWORD must be set.")
 
     # Define the API base URL
-    api_base_url = f"https://{prism_central_host}:9440/api/nutanix/v3"
+    api_base_url = f"https://{prism_central_host}:{prism_central_port}/api/nutanix/v3"
 
     # Initialize the session with basic authentication
     session = requests.Session()
